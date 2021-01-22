@@ -1,5 +1,4 @@
 # Lecture 2: Markov Decision Process
-
 ## Markov Processes
 - MDPs formally describe an environment for RL 
 - A state is Markov if it fulfills the Markov property
@@ -8,9 +7,7 @@
     - State transition matrix defines transition probabilities from all states s to all states s'. Each row sums to 1 (rows=s, cols=s').
 - A **Markov process** is made up of a tuple (S, P), where S is a finite set of states and P is state transition probability matrix
     - A memoryless random process (a sequence of random states with the Markov property), sampled from the probability distribution's defined dynamics.
- 
-
-## Markov Reward Processes
+ ## Markov Reward Processes
 Markov reward process is a Markov chain with value judgements, represented by (S,P,R,gamma)
 - R is the reward that'll be derived from the current state s
 - discount factor gamma ([0,1]) defines the present value of future rewards (determining how much to prefer immediate over future rewards)
@@ -29,7 +26,7 @@ Markov reward process is a Markov chain with value judgements, represented by (S
 - (S, A, P, R, gamma)
     - adding a set of actions to the markov reward process definition
     - can flatten back into mp or mrp using a sum over actions, weighted by the probability determined by policy
-<img src="./img/l2_mdp_def.png" width="400">
+<img src="./img/l2_mdp_df.png" width="400">
 
 - **policy** pi captures the probabilities of an action given a state (only the current state, not the history, because of the markov property )
 - **state-value function** v<sub>pi</sub>(s) is the expected G<sub>t</sub> starting from state s and following policy pi
@@ -52,4 +49,3 @@ Markov reward process is a Markov chain with value judgements, represented by (S
     - nonlinear, no closed form bc max. instead use iterative solution methods.
 
 - principle of optimality: choosing greedily wrt to v* --> optimal policy
-## Extensions to MDPs
